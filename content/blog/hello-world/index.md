@@ -231,20 +231,8 @@ This is [an example] [id] reference-style link.
 
 **double underscores**
 
-This 
+# This is Some Paragraph
 
 has some `code` in it.
 
 ![Speakers](bluetooth-speakers-banner.jpg "Speakers")
-
-
-
-```python
-This paragraph has some `code` in it.
-```
-
-![Alt Text](https://placehold.it/200x50 "Image Title")
-
-```
-![Alt Text](https://placehold.it/200x50 "Image Title")
-```
