@@ -122,12 +122,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/secret`],
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify-cms`,
