@@ -1,4 +1,11 @@
 /* CSS Custom Properties Definitions */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+
+/* Download Bootsrap NPM : npm install --save bootstrap@latest */
+/* Include bootsrap in index.js import 'bootstrap/dist/css/bootstrap.min.css'; */
 
 :root {
   --maxWidth-none: "none";
@@ -30,11 +37,11 @@
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --fontFamily-serif: "Merriweather", "Georgia", "Cambria", "Times New Roman",
     Times, serif;
-  --font-body: var(--fontFamily-serif);
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
-  --fontWeight-normal: 400;
+  --fontWeight-normal: 500;
   --fontWeight-medium: 500;
   --fontWeight-semibold: 600;
   --fontWeight-bold: 700;
@@ -68,6 +75,8 @@
 :after,
 :before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -78,7 +87,8 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  /* font-family: var(--font-body); */
+  font-family: "Montserrat", sans-serif !important;
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }
@@ -160,11 +170,13 @@ h6 > a {
 /* Prose */
 
 p {
-  line-height: var(--lineHeight-relaxed);
+  line-height: 1.8;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 ul,
@@ -183,6 +195,12 @@ ol li {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
 
+li {
+  font-size: 1.1rem;
+  margin-left: 1.4rem;
+  font-weight: 500;
+}
+
 li > p {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
@@ -198,13 +216,14 @@ li > ul {
 
 blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
+  margin-left: calc(1 * var(--spacing-1));
   margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
+  padding: var(--spacing-1) var(--spacing-1) var(--spacing-1) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
   font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
+  background-color: whitesmoke;
 }
 
 blockquote > :last-child {
@@ -231,6 +250,7 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
+  font-weight: 500;
 }
 
 a:hover,
@@ -240,10 +260,26 @@ a:focus {
 
 /* Custom classes */
 
+.col-md-4 {
+  padding: 0 1rem !important;
+}
+
+.posts {
+  margin: 0;
+  padding: 0;
+}
+
+.post-list {
+  margin-left: 0;
+}
+
 .global-wrapper {
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  /* max-width: var(--maxWidth-wrapper); */
+  width: 60rem;
+  max-width: 100%;
+  /* padding: 0 var(--spacing-5); */
+  /* background-color: red; */
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -317,6 +353,11 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.navbar {
+  /* background-color: red; */
+  /* margin-top: 1rem; */
 }
 
 /* Media queries */

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -27,12 +28,14 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
+      <div className="">
+      <ol style={{ listStyle: `none` }} className="row posts">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.fields.slug} className="col-md-4 post-list">
+              
               <article
                 className="post-list-item"
                 itemScope
@@ -59,6 +62,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      </div>
     </Layout>
   )
 }
